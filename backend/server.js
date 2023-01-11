@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const path = require("path")
 
 const userCtrl = require('./controllers/users')
+const commentCtrl = require('./controllers/comments')
 
 
 // Middleware 
@@ -21,6 +22,7 @@ app.use(express.json())
 // routes
 
 app.use('/users', userCtrl)
+app.use('/comments', commentCtrl)
 
 
 app.listen(process.env.PORT, () => {
