@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../utils/api"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Image } from "react-bootstrap"
-import "./login-signup.css"
+
 
 
 const LogIn = (props) => {
@@ -33,13 +32,13 @@ const LogIn = (props) => {
         <>
         <div className="signup-image" />
         <div className="Login-Signup-Div">    
-        <Image src="https://i.postimg.cc/wvXyPfjH/sailboat.png" width="15%" fluid />  
+        
         <h1>Log In</h1>
 <Form>
   <Form.Group className="mb-4" controlId="formBasicUsername" >
     <Form.Label>Username</Form.Label>
     <Form.Control 
-    input type="text" 
+    type="text" 
     className="form-control" 
     name="username" 
     onChange={handleChange} 
@@ -50,7 +49,7 @@ const LogIn = (props) => {
   <Form.Group className="mb-4" controlId="formBasicPassword" >
     <Form.Label>Password</Form.Label>
     <Form.Control 
-    input type="password" 
+    type="password" 
     className="form-control" 
     name="password" 
     onChange={handleChange} 

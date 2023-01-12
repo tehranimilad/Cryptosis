@@ -21,10 +21,8 @@ function Nav(props) {
 
         <nav className="navbar mavbar-expand-lg navbar-light bg-light">
               <div className="navbar-header">
-              <Image src="https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?cs=srgb&dl=pexels-worldspectrum-844124.jpg&fm=jpg" width="25%" fluid />
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
-            <Link to="/newproduct" className="nav-link">Post New</Link>
             <Link to="/account" className="nav-link">Account</Link>
             <Link onClick={handleLogOut} className="nav-link">LogOut</Link>
           

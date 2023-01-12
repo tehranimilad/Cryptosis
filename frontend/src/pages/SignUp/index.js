@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Image } from "react-bootstrap"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import "../LogIn/login-signup.css"
+
 
 const SignUp = (props) => {
     const [formData, setFormData] = useState({ username: '', password: ''})
@@ -27,13 +27,12 @@ const SignUp = (props) => {
         <>
         <div className="signup-image"/>
         <div className="Login-Signup-Div">
-        <Image src="https://i.postimg.cc/wvXyPfjH/sailboat.png" width="15%" fluid />
         <h1>Sign Up</h1>
         <Form>
         <Form.Group className="mb-4" controlId="formBasicUsername" >
         <Form.Label>Username</Form.Label>
         <Form.Control 
-        input type="text" 
+        type="text" 
         className="form-control" 
         name="username" 
         onChange={handleChange} 
@@ -44,7 +43,7 @@ const SignUp = (props) => {
         <Form.Group className="mb-4" controlId="formBasicPassword" >
         <Form.Label>Password</Form.Label>
         <Form.Control 
-        input type="password" 
+        type="password" 
         className="form-control" 
         name="password" 
         onChange={handleChange} 
