@@ -10,13 +10,13 @@ const config = {
 
 // Log in to User Account
 export async function userLogin(formData) {
-    const { data } = await axios.post('http://localhost:8000/user/login', formData)
+    const { data } = await axios.post('http://localhost:8000/users/login', formData)
     return data
 }
 
 // Sign Up User Account 
 export async function userSignUp(formData) {
-    const { data } = await axios.post('http://localhost:8000/user/signup', formData)
+    const { data } = await axios.post('http://localhost:8000/users/signup', formData)
     return data
 }
 
@@ -24,7 +24,7 @@ export async function userSignUp(formData) {
 // Show User / Posts (Account Page)
 
 export async function getUserAccount(userId) {
-    const { data } = await axios.get(`http://localhost:8000/user/${userId}`, config)
+    const { data } = await axios.get(`http://localhost:8000/users/${userId}`, config)
     return data
 }
 
@@ -32,12 +32,12 @@ export async function getUserAccount(userId) {
 // Delete User and Associated comments
 
 export async function deleteUserAccount(userId) {
-    await axios.delete(`http://localhost:8000/user/${userId}`, config)
+    await axios.delete(`http://localhost:8000/users/${userId}`, config)
 }
 
 // Get token data
 export async function getToken() {
-    const { data } = await axios.get('http://localhost:8000/user/token', config)
+    const { data } = await axios.get('http://localhost:8000/users/token', config)
     return data
 }
 

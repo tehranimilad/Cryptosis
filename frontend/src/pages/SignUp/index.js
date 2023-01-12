@@ -16,6 +16,7 @@ const SignUp = (props) => {
 
     function handleSubmit(event) {
         event.preventDefault()
+        console.log(formData)
         userSignUp(formData)
             .then((data) => localStorage.token = data.token)
             props.setIsLoggedIn(true)

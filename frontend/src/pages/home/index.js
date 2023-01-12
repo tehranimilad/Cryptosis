@@ -3,6 +3,7 @@ import { getAllcomments } from '../../utils/api';
 import TradingViewWidgetSingle from '../../components/tradingView/tradingView';
 import TradingViewChart from '../../components/tradingViewChart/tradingViewChart';
 import TradingTicker from '../../components/tradingTicker/tradingTicker';
+import './home.css'
 
 export default function Home() {
     const [commentsList, setComments] = useState([]);
@@ -13,16 +14,17 @@ export default function Home() {
     }, []);
     return (
       <div>
+      <h1>Cryptosis</h1>
+      <TradingViewWidgetSingle />
+      <TradingViewChart />
+      {/* <TradingTicker />  */}
       <div className="comments">
           {commentsList.map((comment, i) => {
               return(
                   <div key={i}>
                       <h1> {comment.crypto} </h1>
-                      <h3>{comment.user.username} </h3> 
+                      <h3>{comment.user && comment.user.username} </h3> 
                       <p>{comment.comment}</p>
-                      <TradingViewWidgetSingle />
-                      <TradingViewChart />
-                      <TradingTicker />
                   </div>
                  
               );

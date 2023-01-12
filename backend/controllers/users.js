@@ -4,6 +4,7 @@ const db = require('../models')
 const jwt = require('jwt-simple')
 const config = require('../config/config')
 
+
 // Checks if the user token created when logging in exists
 function isAuthenticated(req, res, next){
     if(req.headers.authorization){
@@ -28,7 +29,6 @@ router.post('/signup', async (req, res) => {
         })
     } else {
         res.sendStatus(401)
-    
     }})
 
 //Login Route- works in Postman
@@ -54,12 +54,13 @@ router.get('/token', isAuthenticated, async (req, res) => {
     // Find user by the decoded token ID we established when logging in / signing up
     const foundUser = await db.User.findById(decoded.id)
     // Find the comments linked to the user by the ID of that user
-    const usercomments = await db.Comment.find({ user: foundUser._id })
+    const userComments = await Comments.find({ user: foundUser._id });
     res.json({
         user: foundUser,
-        comments: usercomments
+        comments: userComments
     })
 })
+
 
 // All Users Index Route 
 router.get('/', async (req, res) => {
@@ -72,7 +73,8 @@ router.get('/:id', isAuthenticated, async (req, res)=> {
     const token = req.headers.authorization
     const decoded = jwt.decode(token, config.jwtSecret)
     const foundUser = await db.User.findById(decoded.id)
-    const comments = await db.Comments.find({ user: foundUser._id })
+    const userComments = await Comments.find({ user: foundUser._id });
+
     res.json({
         user: foundUser,
         comments: userComments
@@ -81,7 +83,7 @@ router.get('/:id', isAuthenticated, async (req, res)=> {
 
 // Delete User/Associated Posts
 router.delete('/:id', isAuthenticated, async (req, res)=> {
-    await db.Comments.deleteMany({ user: req.params.id})
+    await Comments.deleteMany({ user: req.params.id})
     await db.User.findByIdAndDelete(req.params.id)
     res.sendStatus(200)
 })
