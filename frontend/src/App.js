@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Nav from './components/nav';
+import MyNavbar from './components/nav';
 import { getToken } from './utils/api';
 import LogIn from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
+import NewComment from './pages/NewComment';
+import AccountPage from './pages/AccountPage';
+import ShowCommentEdit from './pages/CommentEdit';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 
@@ -40,11 +46,14 @@ function App() {
     :
     <main>
 
-      <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <MyNavbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<LogIn setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route path="/newcomment" element={<NewComment/>} />
+          <Route path="/commentedit/:id" element={<ShowCommentEdit />} />
+          <Route path="/account" element={<AccountPage currentUser={currentUser} setIsLoggedIn={setIsLoggedIn}/>} />
         </Routes>
         
     </main>}

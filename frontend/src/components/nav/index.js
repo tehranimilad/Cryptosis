@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import TradingTicker from "../tradingTicker/tradingTicker";
 
 
-function Nav(props) {
+function MyNavbar(props) {
   
   const navigate = useNavigate()
   
@@ -15,17 +15,19 @@ function Nav(props) {
 
   return (
     <>
+        {/* <TradingTicker /> */}
         {/* If the user is logged in, render the following content */}
         {props.isLoggedIn ? 
 
         <nav className="navbar mavbar-expand-lg navbar-light bg-light">
-          {/* <TradingTicker /> */}
+  
               <div className="navbar-header">
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
+            <Link to="/newcomment" className="nav-link">New Post</Link>
             <Link to="/account" className="nav-link">Account</Link>
             <Link onClick={handleLogOut} className="nav-link">LogOut</Link>
-          
+           
         </nav>
         : 
         // If the user is not logged in, render the follwing content
@@ -44,4 +46,5 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default MyNavbar;
+

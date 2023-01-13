@@ -41,36 +41,36 @@ export async function getToken() {
     return data
 }
 
-
-export async function createcomments(formData) {
+// Create Comment
+export async function createComments(formData) {
     const { data } = await axios.post('http://localhost:8000/comments/', formData, config)
     return data
 }
 
 
-// Get all commentss
+// Get all comments
 
-export async function getAllcomments() {
+export async function getAllComments() {
     const { data } = await axios.get('http://localhost:8000/comments/')
     return data
 }
 
 // Show One comments
 
-export async function showOnecomments(itemId) {
+export async function showOneComments(itemId) {
     const { data } = await axios.get(`http://localhost:8000/comments/${itemId}`)
     return data
 }
 
 // Update a comments
 
-export async function updateOnecomments(itemId, formData) {
+export async function updateOneComments(itemId, formData) {
     const { data } = await axios.put(`http://localhost:8000/comments/${itemId}`, formData)
     return data
 }
 
 // Delete a comments
 
-export async function deleteOnecomments(itemId) {
+export async function deleteOneComments(itemId) {
     await axios.delete(`http://localhost:8000/comments/${itemId}`, config)
 }

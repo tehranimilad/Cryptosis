@@ -28,6 +28,8 @@ export default function TradingViewChart() {
       function createWidget() {
         if (document.getElementById('tradingview_1a6a2') && 'TradingView' in window) {
           new window.TradingView.widget({
+            width: 500,
+            height: 500,
             autosize: true,
             symbol: "BITSTAMP:ETHUSD",
             interval: "D",
