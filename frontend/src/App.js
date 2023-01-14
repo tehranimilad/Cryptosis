@@ -9,9 +9,8 @@ import Home from './pages/Home';
 import NewComment from './pages/NewComment';
 import AccountPage from './pages/AccountPage';
 import ShowCommentEdit from './pages/CommentEdit';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import LandingPage from './pages/LandingPage';
+
 
 
 
@@ -48,6 +47,7 @@ function App() {
 
       <MyNavbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Routes>
+          {/* <Route path="/" element={<LandingPage/>} /> */}
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<LogIn setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}/>} />

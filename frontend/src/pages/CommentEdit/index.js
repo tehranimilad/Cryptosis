@@ -9,6 +9,7 @@ const ShowCommentEdit = () => {
 
     const [showCommentData, setShowCommentData] = useState({})
     const [editedState, setEditedState] = useState ({
+        title: '',
         crypto: '',
         comment: ''
     })

@@ -21,6 +21,7 @@ const SignUp = (props) => {
             .then((data) => localStorage.token = data.token)
             props.setIsLoggedIn(true)
             navigate('/')
+            setTimeout(() => window.location.reload(), 1000)
     }
 
 

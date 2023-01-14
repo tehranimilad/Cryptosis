@@ -1,6 +1,33 @@
+body {
+    background-color: white;
+    background: white;
+}
+
 .comments {
     border:1px solid black;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 5%;
+    background: white;
+}
+
+.homeGiphy {
+    margin: 0 auto;
+    display: block;
+    border:1px solid black;
+    box-shadow: 2px 2px 7px rgb(0, 0, 0);
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+
+.mainFormHeader {
+    text-align: center;
+}
+
+.addCommentLink {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 

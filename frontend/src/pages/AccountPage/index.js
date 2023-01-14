@@ -6,67 +6,65 @@ import React, { useEffect, useState } from "react";
 
 
 const AccountPage = (props) => {
-    const navigate = useNavigate()
-    const [userData, setUserData] = useState({})
-    const [userCommentData, setUserCommentData] = useState([])
+    const navigate = useNavigate();
+    const [userData, setUserData] = useState({});
+    const [userCommentData, setUserCommentData] = useState([]);
 
     useEffect(() => {
-        setUserData(props.currentUser.user)
-        setUserCommentData(props.currentUser.comments)
-    }, [props])
+        if(props.currentUser && props.currentUser.user) {
+            setUserData(props.currentUser.user);
+            setUserCommentData(props.currentUser.comments);
+        }
+    }, [props.currentUser]);
 
     const handleDelete = () => {
-        // Axios function to delete user account by using user.id 
-        deleteUserAccount(userData._id)
-        // Clearning local storage in order to log out user
-        localStorage.clear()
-        // Setting user's login status to false, aka logged out
-        props.setIsLoggedIn(false)
-        // Then navigate back home
-        navigate('/')
+        deleteUserAccount(userData._id);
+        localStorage.clear();
+        props.setIsLoggedIn(false);
+        navigate('/');
     }
 
     return(
         <>
         <div className="account-page">
-        <div>
-            <div className="coloumn sm-6 account-greeting">
-        <div className="account-info">
-            <h1>Hello, {userData.username}</h1>
-            <p>HODL or die trying</p>
-                <h4>Username: {userData.username}</h4>
-                <p> Want to create a new comment? If so, click on the button below!</p>
-                <Button href="/newcomment" id="create-comment">Create Listing</Button>
-                <p>Permantly delete your account, active listings, and all data associated with it.</p>
-                <p id="warning"> Warning: this action can't be undone!</p> 
-                <Button id="delete-account" onClick={handleDelete}>Delete Account</Button>
+            <div>
+                <div className="coloumn sm-6 account-greeting">
+                    <div className="account-info">
+                        {/* <h1>Hello, {userData.username ? userData.username : 'User'}</h1> */}
+                        <p>HODL or die trying</p>
+                        <h4>Username: {userData.username}</h4>
+                        <p> Want to create a new comment? If so, click on the button below!</p>
+                        <Button href="/newcomment" id="create-comment">Create Listing</Button>
+                        <p>Permantly delete your account, active listings, and all data associated with it.</p>
+                        <p id="warning"> Warning: this action can't be undone!</p> 
+                        <Button id="delete-account" onClick={handleDelete}>Delete Account</Button>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
         <div className="active-listings">
-            <h2>Your Active Comments:</h2>
-            <card>
-            <div>
+            <h2>Your Active Listings:</h2>
+            <div className="row">
                 {userCommentData.map((comment, i) => {
+                    if (!userData) return null;
                     return(
-                    <div key={i}>
+                    <div key={i} className="card" style={{width: '18rem'}}>
+                        <img className="card-img-top" src={comment.image} alt={comment.title}/>
                         <div className="card-body">
-                            <h5>{comment.crypto}</h5>
-                            <p>{comment.comment}</p>
-                            
+                            <h5 className="card-title">{comment.title}</h5>
+                            <p className="card-text">{comment.description}</p>
                             <div>
-                            <Link to={"/commentedit/" + comment._id}>Edit</Link>
+                                <Link to={"/commentedit/" + comment._id}>Edit</Link>
                             </div>
                         </div>
                     </div>
                     )
                 })}
             </div>
-            </card>
         </div>
         </>
     )
 }
+
 
 export default AccountPage 

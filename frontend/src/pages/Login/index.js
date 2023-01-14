@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../utils/api"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import './Login.css';
+import { Image } from "react-bootstrap"
 
 
 
@@ -25,6 +27,7 @@ const LogIn = (props) => {
         // Sets our loggedin state (passed down in props to true)
         props.setIsLoggedIn(true)
         navigate('/')
+        setTimeout(() => window.location.reload(), 80)
     }
 
 
@@ -32,6 +35,7 @@ const LogIn = (props) => {
         <>
         <div className="signup-image" />
         <div className="Login-Signup-Div">    
+        <Image src="https://thumbs.gfycat.com/EqualPowerfulKoodoo-size_restricted.gif" width="15%" fluid /> 
         
         <h1>Log In</h1>
 <Form>
@@ -68,7 +72,7 @@ const LogIn = (props) => {
   </Form.Group>
   
   <Form.Group className="mb-4">
-  <Button href="/signup" id="Signup-But">Sign Up</Button>
+  <Button variant="secondary" href="/signup" id="Signup-But">Sign Up</Button>
   </Form.Group>
 
 </Form>
