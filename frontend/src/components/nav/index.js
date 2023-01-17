@@ -24,6 +24,7 @@ function Nav(props) {
             <div className="navbar-header">
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
+            <Link to="/home" className="nav-link">Home</Link>
             <Link to="/account" className="nav-link">Account</Link>
             <Link to="/newcomment" className="nav-link">New Post</Link>
             <Link onClick={handleLogOut} className="nav-link">LogOut</Link>
@@ -34,7 +35,7 @@ function Nav(props) {
             <div className="navbar-header">
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
-              <Link to="/home" className="nav-link">Home</Link>
+          <Link to="/home" className="nav-link">Home</Link>
           <Link to="/signup" className="nav-link">Sign Up</Link>
           <Link to="/login" className="nav-link">Login</Link>
         </nav>

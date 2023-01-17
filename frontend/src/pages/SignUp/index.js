@@ -29,6 +29,8 @@ const SignUp = (props) => {
         <>
         <div className="signup-image"/>
         <div className="Login-Signup-Div">
+        <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cryptocurrency_Logo.svg/3888px-Cryptocurrency_Logo.svg.png" width="15%" fluid /> 
+        
         <h1>Sign Up</h1>
         <Form>
         <Form.Group className="mb-4" controlId="formBasicUsername" >

@@ -35,7 +35,7 @@ const LogIn = (props) => {
         <>
         <div className="signup-image" />
         <div className="Login-Signup-Div">    
-        <Image src="https://thumbs.gfycat.com/EqualPowerfulKoodoo-size_restricted.gif" width="15%" fluid /> 
+        <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cryptocurrency_Logo.svg/3888px-Cryptocurrency_Logo.svg.png" width="15%" fluid /> 
         
         <h1>Log In</h1>
 <Form>
