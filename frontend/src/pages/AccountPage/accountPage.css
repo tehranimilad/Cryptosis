@@ -1,0 +1,49 @@
+
+.account-page {
+    background-image: url("https://cdn.wallpapersafari.com/35/92/cmYIfQ.jpg");
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.account-greeting {
+    max-width: 70%;
+    margin:0 auto;
+    text-align: center;
+    padding: 2%;
+}
+
+.account-info {
+    padding-top: 80px;
+    color: white;
+}
+
+
+#delete-account {
+    background-color: red;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+#warning {
+    font-weight: bolder;
+}
+
+
+.deleteAccountDiv {
+    text-align: center;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.active-listings {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

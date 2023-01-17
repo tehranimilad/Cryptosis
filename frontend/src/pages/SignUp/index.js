@@ -20,8 +20,8 @@ const SignUp = (props) => {
         userSignUp(formData)
             .then((data) => localStorage.token = data.token)
             props.setIsLoggedIn(true)
-            navigate('/')
-            setTimeout(() => window.location.reload(), 1000)
+            navigate('/account')
+            setTimeout(() => window.location.reload(), 120)
     }
 
 

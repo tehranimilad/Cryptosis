@@ -11,7 +11,7 @@ const ShowCommentEdit = () => {
     const [editedState, setEditedState] = useState ({
         title: '',
         crypto: '',
-        comment: ''
+        comment: '',
     })
 
     const {id} = useParams()
@@ -56,6 +56,15 @@ const ShowCommentEdit = () => {
 
             <div className="col-md-6" id="EditCommentDiv">
             <Form>
+            <Form.Group className="mb-3">
+                        <Form.Label className="editCommentLabel">Title</Form.Label>
+                        <Form.Control
+                            id="title"
+                            type="text"
+                            value={editedState.title} 
+                            onChange={handleChange} 
+                            required />
+                    </Form.Group> 
             <Form.Group className="mb-3">
                         <Form.Label className="editCommentLabel">Crypto</Form.Label>
                         <Form.Control

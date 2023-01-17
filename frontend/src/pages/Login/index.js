@@ -26,7 +26,7 @@ const LogIn = (props) => {
             .then((data) => localStorage.token = data.token)
         // Sets our loggedin state (passed down in props to true)
         props.setIsLoggedIn(true)
-        navigate('/')
+        navigate('/account')
         setTimeout(() => window.location.reload(), 80)
     }
 

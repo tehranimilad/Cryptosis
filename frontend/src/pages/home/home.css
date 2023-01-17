@@ -1,6 +1,7 @@
 body {
     background-color: white;
     background: white;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .comments {
@@ -9,6 +10,14 @@ body {
     margin: 0 auto;
     margin-bottom: 5%;
     background: white;
+}
+
+.commentContent {
+    background: rgb(255, 255, 255);
+}
+
+.commentSection {
+    background: rgb(255, 255, 255);
 }
 
 .homeGiphy {
@@ -31,3 +40,10 @@ body {
     text-align: center;
 }
 
+.tradingview-widget-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}

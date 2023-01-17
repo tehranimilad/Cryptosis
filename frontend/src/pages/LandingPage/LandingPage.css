@@ -1,27 +1,33 @@
-/* body {
-    color: #fff;
-    font-weight: 400;
-    font-size: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Khula", sans-serif;
-    height: 100vh;
-    width: auto;
-    box-sizing: border-box;
-    letter-spacing: 8px;
-    margin: 0;
-    line-height: 1.5;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
 
-  span {
+.landing-page-container {
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  font-weight: 380;
+  font-size: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  font-style: normal;
+  height: 100vh;
+  width: auto;
+  box-sizing: border-box;
+  letter-spacing: 8px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  overflow: hidden;;
+}
+
+span {
     display: inline-block;
   }
 
   .landing-page-container .crypto-animation {
-    background-color: black;
-    color: white;
-} */
-
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 12px;
+} 

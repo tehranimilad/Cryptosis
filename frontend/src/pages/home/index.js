@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createComments, getAllComments } from '../../utils/api';
-import TradingViewWidgetSingle from '../../components/tradingView/tradingView';
+import TradingViewWidget from '../../components/tradingView/tradingView';
 import TradingViewChart from '../../components/tradingViewChart/tradingViewChart';
 import { useNavigate } from "react-router-dom"
 import TradingTicker from '../../components/tradingTicker/tradingTicker';
@@ -12,7 +12,8 @@ import './home.css'
 
 
 
-export default function Home() {
+
+export default function Home(props) {
     const [commentsList, setComments] = useState([]);
     useEffect(() => {
         getAllComments()
@@ -22,24 +23,27 @@ export default function Home() {
     return (
       <div>
       <h1>Cryptosis</h1>
-      {/* <CryptoMarketTicker /> */}
-      <TradingViewWidgetSingle />
-      
+    
+      <div className="tradingview-widget-container">
+            <div className="item"><TradingViewWidget /></div>
+          </div>
 
-      {/* <TradingTicker />  */}
+
       <div className="comments">
       <h2 className="mainFormHeader">Which Cryptocurrency do you think has the most potential?</h2>
         <img className="homeGiphy" src="https://media0.giphy.com/media/QnU6mOrBbElaIQz4Fe/giphy.gif"></img>
-        
+        {props.isLoggedIn ? 
         <a className="addCommentLink" href="/newcomment">Click here to voice your opinion!</a>
+        : null}
+        
           {commentsList.map((comment, i) => {
               return(
-                  <div key={i}>
-                      <p>Title: {comment.title} </p>
-                      <p>Username: {comment.user && comment.user.username} </p> 
-                      <p>Time/Date Posted: {comment.created}</p>
-                      <p>Crypto: {comment.crypto} </p>
-                      <p>Comment: {comment.comment}</p>
+                  <div className="commentSection" key={i}>
+                      <p className="commentContent">Title: {comment.title} </p>
+                      <p className="commentContent">Username: {comment.user && comment.user.username} </p> 
+                      <p className="commentContent">Time/Date Posted: {comment.created}</p>
+                      <p className="commentContent">Crypto: {comment.crypto} </p>
+                      <p className="commentContent">Comment: {comment.comment}</p>
                   </div>   
               );
           })}
@@ -47,3 +51,4 @@ export default function Home() {
   </div>
 )
 }
+

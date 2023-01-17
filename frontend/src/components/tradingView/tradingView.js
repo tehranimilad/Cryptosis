@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const TradingViewWidgetSingle = () => {
+const TradingViewWidget = () => {
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
@@ -8,7 +8,7 @@ const TradingViewWidgetSingle = () => {
         script.innerHTML = JSON.stringify({
             symbol: "ETHUSD",
             width: 220,
-            height: 220,
+            height: 180,
             locale: "en",
             dateRange: "12M",
             colorTheme: "light",
@@ -16,8 +16,7 @@ const TradingViewWidgetSingle = () => {
             underLineColor: "rgba(41, 98, 255, 0.3)",
             underLineBottomColor: "rgba(41, 98, 255, 0)",
             isTransparent: false,
-            autosize: false,
-            largeChartUrl: ""
+            autosize: false
         });
         document.querySelector("#tradingview-widget-container").appendChild(script);
     }, []);
@@ -28,7 +27,7 @@ const TradingViewWidgetSingle = () => {
         script.innerHTML = JSON.stringify({
             symbol: "BINANCE:BTCUSD",
             width: 220,
-            height: 220,
+            height: 180,
             locale: "en",
             dateRange: "12M",
             colorTheme: "light",
@@ -49,7 +48,7 @@ const TradingViewWidgetSingle = () => {
         script.innerHTML = JSON.stringify({
             symbol: "BINANCE:MATICUSD",
             width: 220,
-            height: 220,
+            height: 180,
             locale: "en",
             dateRange: "12M",
             colorTheme: "light",
@@ -62,8 +61,26 @@ const TradingViewWidgetSingle = () => {
         });
         document.querySelector("#tradingview-widget-container").appendChild(script);
     }, []);
-    
-
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
+        script.async = true;
+        script.innerHTML = JSON.stringify({
+            symbol: "CURRENCYCOM:USDTUSD",
+            width: 220,
+            height: 180,
+            locale: "en",
+            dateRange: "12M",
+            colorTheme: "light",
+            trendLineColor: "rgba(41, 98, 255, 1)",
+            underLineColor: "rgba(41, 98, 255, 0.3)",
+            underLineBottomColor: "rgba(41, 98, 255, 0)",
+            isTransparent: false,
+            autosize: false,
+            largeChartUrl: ""
+        });
+        document.querySelector("#tradingview-widget-container").appendChild(script);
+    }, []);
     return (
         <div className="tradingview-widget-container" id="tradingview-widget-container">
             <div className="tradingview-widget-container__widget"></div>
@@ -73,4 +90,4 @@ const TradingViewWidgetSingle = () => {
     );
 }
 
-export default TradingViewWidgetSingle
+export default TradingViewWidget
