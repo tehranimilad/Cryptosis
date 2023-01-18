@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import TradingTicker from "../tradingTicker/tradingTicker";
+import TradingViewChart from "../tradingViewChart/tradingViewChart";
 import './nav.css'
 import { Image } from "react-bootstrap";
 
@@ -20,7 +21,7 @@ function Nav(props) {
         {/* If the user is logged in, render the following content */}
         {props.isLoggedIn ? 
 
-        <nav className="navbar mavbar-expand-lg navbar-light bg-light">
+        <nav className="navbar mavbar-expand-lg navbar-light bg-black">
             <div className="navbar-header">
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
@@ -31,7 +32,7 @@ function Nav(props) {
         </nav>
         : 
         // If the user is not logged in, render the follwing content
-        <nav className="navbar mavbar-expand-lg navbar-light bg-light">
+        <nav className="navbar mavbar-expand-lg navbar-light bg-black">
             <div className="navbar-header">
               <a className="navbar-brand" href="/">Cryptosis</a>
               </div>
@@ -40,7 +41,6 @@ function Nav(props) {
           <Link to="/login" className="nav-link">Login</Link>
         </nav>
         }
-      
     </>
   );
 }

@@ -6,23 +6,23 @@ body {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    background: black;
+    background: rgb(255, 255, 255);
     overflow: auto;
 
 }
 
 .nav-link {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
 
 .nav-link:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .navbar-brand {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .navbar-brand:hover {

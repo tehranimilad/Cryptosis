@@ -2,7 +2,7 @@ import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
 import anime from "animejs";
 import { useEffect } from "react";
 import './LandingPage.css'
-
+import { Image } from "react-bootstrap";
 
 const LandingPage = () => {
     useEffect(() => {
@@ -36,39 +36,14 @@ const LandingPage = () => {
   
     return (
         <>
-
+         <a href="/home"><Image className="landingPageImage" src="https://img.freepik.com/free-vector/popular-cryptocurrency-logos-set_69286-369.jpg?w=2000" width="70%" fluid/></a>
         <div className="landing-page-container">
             <a href="/home"><div className="crypto-animation">
                 Cryptosis
             </div>
             <div className="crypto-animation">
-                Click Here to Continue
-            </div>
-            <div className="crypto-animation">
-                Cryptosis
-            </div>
-            <div className="crypto-animation">
-                Click Here to Continue
-            </div>
-            <div className="crypto-animation">
-                Cryptosis
-            </div>
-            <div className="crypto-animation">
-                Click Here to Continue
-            </div>
-            <div className="crypto-animation">
-                Cryptosis
-            </div>
-            <div className="crypto-animation">
-                Click Here to Continue
-            </div>
-            <div className="crypto-animation">
-                Cryptosis
-            </div>
-            <div className="crypto-animation">
-                Click Here to Continue
-            </div>
-            
+                Click to Continue
+            </div>            
            </a>
         </div>
         </>

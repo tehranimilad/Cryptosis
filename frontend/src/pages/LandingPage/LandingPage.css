@@ -12,7 +12,7 @@
   text-transform: uppercase;
   font-family: 'Orbitron', sans-serif;
   font-style: normal;
-  height: 100vh;
+  /* height: 100vh; */
   width: auto;
   box-sizing: border-box;
   letter-spacing: 8px;
@@ -26,8 +26,15 @@ span {
     display: inline-block;
   }
 
-  .landing-page-container .crypto-animation {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    margin-bottom: 12px;
+.landing-page-container .crypto-animation {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-bottom: 12px;
 } 
+
+.landingPageImage {
+  display: block;
+  margin: 0 auto;
+}
+
+
