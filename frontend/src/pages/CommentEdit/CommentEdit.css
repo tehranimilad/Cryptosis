@@ -1,0 +1,7 @@
+.editImage {
+    background-image: url("https://images4.alphacoders.com/106/1069999.jpg");
+    height: 20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { deleteOneComments, showOneComments, updateOneComments } from "../../utils/api";
 import { useNavigate } from "react-router-dom"
 import { Form, Button, Card } from 'react-bootstrap';
+import './CommentEdit.css'
 
 const ShowCommentEdit = () => {
     const navigate = useNavigate()
@@ -43,23 +44,16 @@ const ShowCommentEdit = () => {
 
     return(
         <>
-        <div className="row">
-            <div className="col-md-6 mx-auto">
-                <Card style={{width: "80%"}} className="mx-auto" >
-                <Card.Body>
-                <Card.Title>{showCommentData.crypto}</Card.Title>
-                <Card.Text>{showCommentData.comment}</Card.Text>
-               
-                </Card.Body>    
-                </Card>
-            
+        <div className="editImage" />
+        <div className="Login-Signup-Div2">  
 
-            <div className="col-md-6" id="EditCommentDiv">
+            <div className="col-md-6 mx-auto" id="EditCommentDiv">
             <Form>
             <Form.Group className="mb-3">
+                <h2>Edit Your Comment</h2>
                         <Form.Label className="editCommentLabel">Title</Form.Label>
                         <Form.Control
-                            id="title"
+                            className="inputFields mx-auto"
                             type="text"
                             value={editedState.title} 
                             onChange={handleChange} 
@@ -68,7 +62,8 @@ const ShowCommentEdit = () => {
             <Form.Group className="mb-3">
                         <Form.Label className="editCommentLabel">Crypto</Form.Label>
                         <Form.Control
-                            id="crypto"
+                            className="inputFields mx-auto"
+                            name="crypto"
                             type="text"
                             value={editedState.crypto} 
                             onChange={handleChange} 
@@ -78,7 +73,8 @@ const ShowCommentEdit = () => {
                     <Form.Group className="mb-3">
                         <Form.Label className="editCommentLabel">Comment</Form.Label>
                         <Form.Control
-                            id="comment"
+                            className="inputFields mx-auto"
+                            name="comment"
                             type="text"
                             value={editedState.comment} 
                             onChange={handleChange} 
@@ -91,7 +87,7 @@ const ShowCommentEdit = () => {
             </Form>
             </div>
             </div>
-        </div>
+        {/* </div> */}
         </>
     )
 }

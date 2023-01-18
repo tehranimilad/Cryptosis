@@ -23,11 +23,15 @@ export default function NewComment() {
 
     const navigate = useNavigate();
     const navigateHome = () => {
-        navigate('/home');
+        navigate('/forum');
     }
 
     function handleSubmit(event) {
         event.preventDefault();
+        if (!formData.comment) {
+            alert("Comment cannot be blank, please enter your comment if you would like to proceed.");
+            return;
+        }
         createComments(formData)
         .then((data) => {
             getAllComments()
@@ -35,6 +39,7 @@ export default function NewComment() {
             .catch(err => alert("couldn't load any comments"))
           })
         navigateHome()
+        setTimeout(() => window.location.reload(), 80)
     }
     
     return (
@@ -64,7 +69,7 @@ export default function NewComment() {
             </Form.Group>
             <Form.Group className="mb-3">
             <Form.Label className="newCommentLabel" htmlFor="description">Comment: </Form.Label> 
-            <Form.Control 
+            <Form.Control
             name="comment" 
             type="text" 
             onChange={handleChange} 
