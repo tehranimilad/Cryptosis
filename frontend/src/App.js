@@ -14,6 +14,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import LandingPage from './pages/LandingPage';
 import CryptoDeepDive from './pages/CryptoDeepDive';
+import PageNotFound from './pages/PageNotFound';
 
 
 
@@ -59,6 +60,7 @@ function App() {
           <Route path="/commentedit/:id" element={<ShowCommentEdit />} />
           <Route path="/account" element={<AccountPage currentUser={currentUser} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/cryptocurrencies" element={<CryptoDeepDive />} />
+          <Route path="/:error" element={<PageNotFound />} />
         </Routes>
         
     </main>}

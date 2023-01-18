@@ -35,7 +35,7 @@ const AccountPage = (props) => {
                     <div className="coloumn sm-6 account-greeting">
                         <h2>Hello {userData.username ? userData.username : 'User'}, Thank You for using Cryptosis!</h2>
                         <h4>Your Username: {userData.username}</h4>
-                        <p> Want to share your cryptocurrency thoughts on the discussion board? If so, click on the button below!</p>
+                        <p> Want to share your cryptocurrency thoughts on our discussion board? If so, click on the button below!</p>
                         <Button href="/newcomment" id="create-comment">Create a Comment</Button>
                         <br />
                         <br />

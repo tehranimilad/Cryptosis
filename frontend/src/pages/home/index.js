@@ -19,12 +19,13 @@ export default function Home(props) {
       <div className="comments">
       <h2 className="mainFormHeader">Which Cryptocurrency do you think has the most potential?</h2>
         {props.isLoggedIn ? 
+        // Button to add comment wont show unless user is logged in
         <Button variant="primary" href="/newcomment">Click here to voice your opinion!</Button>
         : null}
         <Button variant="dark" onClick={() => setShowComments(!showComments)}>
           {showComments ? 'Hide Comments' : 'Show Comments'}
         </Button>
-        
+
           {showComments ? 
           commentsList.map((comment, i) => {
               return(
