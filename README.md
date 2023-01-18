@@ -10,12 +10,6 @@
 * React
 * Node
 
-### Installation Instructions:
-* Fork and Clone Repository
-* In your terminal, run the following command. (On the Frontend & Backend)
-```
-npm i
-```
 ### Approach Taken: 
 
 The first step in building a MERN stack application based on cryptocurrency is to set up the MongoDB database and define the schema for storing information about the various cryptocurrencies, user information for authentication (Login & Signup), and comments that can be left by users once logged in. 
@@ -28,4 +22,9 @@ Finally, I used Node.js to handle the server-side logic, such as connectiong the
 
 It is important to remember that I took the proper consideration when building out this application since there are security, compliance,  and regulations related to cryptocurrency. This application adheres to laws and guidelines that are related t othe handling of cryptocurrency. 
 
-
+### Installation Instructions:
+* Fork and Clone Repository
+* In your terminal, run the following command. (On the Frontend & Backend)
+```
+npm i
+```
