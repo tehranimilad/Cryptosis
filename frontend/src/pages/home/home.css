@@ -10,11 +10,16 @@ h1 {
 }
 
 .comments {
-    border:1px solid black;
-    width: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 7px rgb(0, 0, 0);
+    max-width: 60%;
     margin: 0 auto;
-    margin-bottom: 5%;
-    background: white;
+    text-align: center;
+    align-items: center;
+    padding: 2% 3% 3% 2%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 255, 255);
 }
 
 .commentContent {
@@ -25,15 +30,6 @@ h1 {
     background: rgb(255, 255, 255);
 }
 
-.homeGiphy {
-    margin: 0 auto;
-    display: block;
-    border:1px solid black;
-    box-shadow: 2px 2px 7px rgb(0, 0, 0);
-    margin-top: 15px;
-    margin-bottom: 10px;
-
-}
 
 .mainFormHeader {
     text-align: center;
@@ -52,3 +48,12 @@ h1 {
     align-items: center;
 
 }
+
+.forum-image {
+    background-image: url("https://emoneyadvisor.com/wp-content/uploads/2022/04/MicrosoftTeams-image-15-scaled.jpg");
+    height: 20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

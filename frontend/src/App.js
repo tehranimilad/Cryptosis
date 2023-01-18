@@ -13,6 +13,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import LandingPage from './pages/LandingPage';
+import CryptoDeepDive from './pages/CryptoDeepDive';
 
 
 
@@ -48,14 +49,16 @@ function App() {
     <main>
 
       <MyNavbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      
         <Routes>
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
-          <Route path="/home" element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route path="/forum" element={<Home isLoggedIn={isLoggedIn} />} />
           <Route path="/login" element={<LogIn setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/newcomment" element={<NewComment/>} />
           <Route path="/commentedit/:id" element={<ShowCommentEdit />} />
           <Route path="/account" element={<AccountPage currentUser={currentUser} setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route path="/cryptocurrencies" element={<CryptoDeepDive />} />
         </Routes>
         
     </main>}

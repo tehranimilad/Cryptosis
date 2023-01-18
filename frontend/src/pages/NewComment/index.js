@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { createComments, getAllComments } from '../../utils/api';
+import './newComment.css'
+import { Image } from 'react-bootstrap';
 
 
 
@@ -21,7 +23,7 @@ export default function NewComment() {
 
     const navigate = useNavigate();
     const navigateHome = () => {
-        navigate('/');
+        navigate('/home');
     }
 
     function handleSubmit(event) {
@@ -36,7 +38,10 @@ export default function NewComment() {
     }
     
     return (
-        <div>
+        <>
+        <div className="newCommentImage" />
+        <div className="Login-Signup-Div2">            
+        <h1>Create Post</h1>
             <Form>
             <Form.Group className="mb-3">
             <Form.Label className="newCommentLabel" htmlFor="title">Title: </Form.Label> 
@@ -44,6 +49,7 @@ export default function NewComment() {
             name="title" 
             type="text" 
             onChange={handleChange} 
+            placeholder="Enter Title"
             required 
             />
             </Form.Group>
@@ -52,8 +58,9 @@ export default function NewComment() {
             <Form.Control 
             name="crypto" 
             type="text"  
-            onChange={handleChange} 
-            required />
+            onChange={handleChange}
+            placeholder="Enter Crypto (Optional)"
+             />
             </Form.Group>
             <Form.Group className="mb-3">
             <Form.Label className="newCommentLabel" htmlFor="description">Comment: </Form.Label> 
@@ -61,11 +68,13 @@ export default function NewComment() {
             name="comment" 
             type="text" 
             onChange={handleChange} 
+            placeholder="Enter your comment"
             required 
             />
             </Form.Group>
             <Button id="Newcomment-But" variant="primary" type="submit" onClick={handleSubmit}>Create Comment</Button>
             </Form>
-        </div>
+            </div>
+        </>
     )
 }

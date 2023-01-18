@@ -1,0 +1,14 @@
+.form-control {
+    max-width: 75%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.newCommentImage {
+    background-image: url("https://georgetownlawtechreview.org/wp-content/uploads/2018/11/Se%CC%81ke%CC%81-Godo_image.jpg");
+    height: 55vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 150px
+}

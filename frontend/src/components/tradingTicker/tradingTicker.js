@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './tradingTicker.css'
 
 const TradingTicker = () => {
   useEffect(() => {
@@ -31,8 +32,8 @@ const TradingTicker = () => {
             }
           ],
         "colorTheme": "light",
-        "isTransparent": false,
-        "showSymbolLogo": true,
+        // "isTransparent": false,
+        // "showSymbolLogo": true,
         "locale": "en"
       });
     };

@@ -24,9 +24,10 @@ const LogIn = (props) => {
         // Deconstructing data to set the local storage token equal to the token we created in our login route
         userLogin(formData)
             .then((data) => localStorage.token = data.token)
+            .catch(err => alert("Incorrect username or password. Please try again."))
         // Sets our loggedin state (passed down in props to true)
         props.setIsLoggedIn(true)
-        navigate('/account')
+        navigate('/forum')
         setTimeout(() => window.location.reload(), 80)
     }
 
@@ -34,7 +35,7 @@ const LogIn = (props) => {
     return(
         <>
         <div className="signup-image" />
-        <div className="Login-Signup-Div">    
+        <div className="Login-Signup-Div2">    
         <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cryptocurrency_Logo.svg/3888px-Cryptocurrency_Logo.svg.png" width="15%" fluid /> 
         
         <h1>Log In</h1>
