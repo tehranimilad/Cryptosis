@@ -1,4 +1,4 @@
-import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+import Letterize from "letterizejs"
 import anime from "animejs";
 import { useEffect } from "react";
 import './LandingPage.css'

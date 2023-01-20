@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import '../src/index.css';
 import { Routes, Route } from "react-router-dom";
 import MyNavbar from './components/nav';
-import { getToken } from './utils/api';
 import LogIn from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import NewComment from './pages/NewComment';
 import AccountPage from './pages/AccountPage';
 import ShowCommentEdit from './pages/CommentEdit';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+
 import LandingPage from './pages/LandingPage';
 import CryptoDeepDive from './pages/CryptoDeepDive';
 import PageNotFound from './pages/PageNotFound';
