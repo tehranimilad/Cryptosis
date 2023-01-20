@@ -16,6 +16,7 @@ const commentCtrl = require('./controllers/comments')
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.use(express.static(path.join(path.dirname(__dirname), "frontend", "build")))
 
 
 
@@ -23,6 +24,10 @@ app.use(express.json())
 
 app.use('/users', userCtrl)
 app.use('/comments', commentCtrl)
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(path.dirname(__dirname), "frontend", "build", "index.html"));
+});
 
 
 app.listen(process.env.PORT, () => {
