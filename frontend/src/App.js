@@ -20,18 +20,18 @@ import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [currentUser, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
-  
-  
+  const [currentUser, setCurrentUser] = useState({})
+  const [userName, setUserName] = useState()
   
   useEffect(() => {
     // If local storage token exists then: 
     if (localStorage.token) {
-      // Grab the token and the user data associated with the specific token
-      getToken().then(data => {setUser(data)})
       // Set the User as Logged In
       setIsLoggedIn(true)
+      setUserName(localStorage.getItem('username'))
+      console.log(userName)
+      console.log(isLoggedIn)
       // Set the loading status to false
       setIsLoading(false)
     } else {
@@ -39,7 +39,7 @@ function App() {
       setIsLoading(false)
     }
     
-  }, [])
+  }, [isLoggedIn])
 
   
   return (
@@ -54,11 +54,11 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
           <Route path="/forum" element={<Home isLoggedIn={isLoggedIn} />} />
-          <Route path="/login" element={<LogIn setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route path="/login" element={<LogIn setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/newcomment" element={<NewComment/>} />
           <Route path="/commentedit/:id" element={<ShowCommentEdit />} />
-          <Route path="/account" element={<AccountPage currentUser={currentUser} setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route path="/account" element={<AccountPage username={userName} currentUser={currentUser} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/cryptocurrencies" element={<CryptoDeepDive />} />
           <Route path="/:error" element={<PageNotFound />} />
         </Routes>

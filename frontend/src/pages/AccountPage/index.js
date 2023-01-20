@@ -1,23 +1,31 @@
-import { deleteUserAccount } from "../../utils/api"
+import { deleteUserAccount, getUserComments } from "../../utils/api"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from "react";
 import './accountPage.css'
-
+import { getToken } from "../../utils/api";
 
 const AccountPage = (props) => {
     const navigate = useNavigate();
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState();
     const [userCommentData, setUserCommentData] = useState([]);
+    const userId = localStorage.getItem('userId');
 
     useEffect(() => {
-        if(props.currentUser && props.currentUser.user) {
-            setUserData(props.currentUser.user);
-            setUserCommentData(props.currentUser.comments);
-        }
-    }, [props.currentUser]);
+        // Grab the token and the user data associated with the specific token
+        setUserData(localStorage.getItem('username'))
+        console.log(userId)
+        getUserComments(userId)
+        .then((data) => {
+            setUserCommentData(data.comments)
+        })
+       
+        
+}, []);
 
+
+    console.log(userCommentData)
     const handleDelete = () => {
         if (window.confirm("Are you sure you want to delete your account? This action can't be undone!")) {
             deleteUserAccount(userData._id);
@@ -33,8 +41,8 @@ const AccountPage = (props) => {
             <div>
                 <div className="account-info" >
                     <div className="coloumn sm-6 account-greeting">
-                        <h2>Hello {userData.username ? userData.username : 'User'}, Thank You for using Cryptosis!</h2>
-                        <h4>Your Username: {userData.username}</h4>
+                        <h2>Hello, Thank You for using Cryptosis!</h2>
+                        <h4>Your Username: {localStorage.username}</h4>
                         <p> Want to share your cryptocurrency thoughts on our discussion board? If so, click on the button below!</p>
                         <Button href="/newcomment" id="create-comment">Create a Comment</Button>
                         <br />

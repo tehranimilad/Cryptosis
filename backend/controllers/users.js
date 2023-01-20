@@ -34,24 +34,22 @@ router.post('/signup', async (req, res) => {
 //Login Route- works in Postman
 router.post('/login', async (req, res) => {
     try {
-        const foundUser = await db.User.findOne({ username: req.body.username});
-        if(!foundUser) {
-            res.status(401).json({message: "Incorrect username or password"})
-        } else if(req.body.password === foundUser.password){
-            const payload = {id: foundUser._id}
-            const token = jwt.encode(payload, config.jwtSecret)
-            res.json({
-                user: foundUser,
-                token: token,
-            })
-        } else {
-            res.status(401).json({message: "Incorrect username or password"})
-        }
+      const foundUser = await db.User.findOne({ username: req.body.username})
+      if(req.body.password === foundUser.password){
+          const payload = {id: foundUser._id}
+          const token = jwt.encode(payload, config.jwtSecret)
+          res.json({
+              user: foundUser,
+              token: token,
+          })
+      } else {
+          res.status(401).json({message: "Incorrect username or password"})
+      }
     } catch (error) {
-        console.error(error)
-        res.status(500).json({message: "An error occurred. Please try again later."})
+      console.error(error)
+      res.status(500).json({message: "An error occurred. Please try again later."})
     }
-})
+  })
 
 // Show Token
 router.get('/token', isAuthenticated, async (req, res) => {
@@ -75,14 +73,9 @@ router.get('/', async (req, res) => {
 })
 
 // Show User / Associated Posts
-router.get('/:id', isAuthenticated, async (req, res)=> {
-    const token = req.headers.authorization
-    const decoded = jwt.decode(token, config.jwtSecret)
-    const foundUser = await db.User.findById(decoded.id)
-    const userComments = await Comments.find({ user: foundUser._id });
-
+router.get('/:id', async (req, res)=> {
+    const userComments = await Comments.find({ user: req.params.id });
     res.json({
-        user: foundUser,
         comments: userComments
     })
 })

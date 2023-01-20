@@ -16,12 +16,16 @@ const SignUp = (props) => {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(formData)
         userSignUp(formData)
-            .then((data) => localStorage.token = data.token)
-            props.setIsLoggedIn(true)
-            navigate('/account')
-            setTimeout(() => window.location.reload(), 150)
+        .then((data) => {
+            localStorage.username = data.user.username
+            localStorage.userId = data.user._id
+            localStorage.token = data.token
+        })
+        props.setIsLoggedIn(true)
+        navigate('/forum')
+
+     
     }
 
 

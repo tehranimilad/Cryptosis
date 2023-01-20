@@ -13,7 +13,7 @@ function Nav(props) {
   const handleLogOut = () => {
       localStorage.clear()
       props.setIsLoggedIn(false)
-      navigate.push('/')
+      navigate('/forum')
     }
 
   return (

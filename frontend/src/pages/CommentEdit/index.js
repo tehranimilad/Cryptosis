@@ -33,13 +33,14 @@ const ShowCommentEdit = () => {
         updateOneComments(showCommentData._id, editedState).then(data => {
             setShowCommentData(data)
             setEditedState(data)
+            navigate('/forum')
         })
     }
 
     const deleteComment = () => {
         const commentId = showCommentData._id
         deleteOneComments(commentId).then(alert("You deleted this Comment"))
-        navigate('/')
+        navigate('/forum')
 }
 
     return(
@@ -53,7 +54,7 @@ const ShowCommentEdit = () => {
                 <h2>Edit Your Comment</h2>
                         <Form.Label className="editCommentLabel">Title</Form.Label>
                         <Form.Control
-                            className="inputFields mx-auto"
+                            id="title"
                             type="text"
                             value={editedState.title} 
                             onChange={handleChange} 
@@ -62,8 +63,7 @@ const ShowCommentEdit = () => {
             <Form.Group className="mb-3">
                         <Form.Label className="editCommentLabel">Crypto</Form.Label>
                         <Form.Control
-                            className="inputFields mx-auto"
-                            name="crypto"
+                            id="crypto"
                             type="text"
                             value={editedState.crypto} 
                             onChange={handleChange} 
@@ -73,8 +73,7 @@ const ShowCommentEdit = () => {
                     <Form.Group className="mb-3">
                         <Form.Label className="editCommentLabel">Comment</Form.Label>
                         <Form.Control
-                            className="inputFields mx-auto"
-                            name="comment"
+                            id="comment"
                             type="text"
                             value={editedState.comment} 
                             onChange={handleChange} 
@@ -87,7 +86,6 @@ const ShowCommentEdit = () => {
             </Form>
             </div>
             </div>
-        {/* </div> */}
         </>
     )
 }

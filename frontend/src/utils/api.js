@@ -55,6 +55,14 @@ export async function getAllComments() {
     return data
 }
 
+
+// Get All User Comments
+export async function getUserComments(itemId) {
+    const { data } = await axios.get(`http://localhost:8000/users/${itemId}`)
+    return data
+}
+
+
 // Show One comments
 
 export async function showOneComments(itemId) {
