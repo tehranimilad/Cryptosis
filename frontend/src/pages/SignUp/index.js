@@ -23,7 +23,7 @@ const SignUp = (props) => {
             localStorage.token = data.token
         })
         props.setIsLoggedIn(true)
-        navigate('/forum')
+        navigate('/home')
 
      
     }

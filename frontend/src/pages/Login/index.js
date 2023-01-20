@@ -40,7 +40,7 @@ const LogIn = (props) => {
             })
             .catch(err => alert("Incorrect username or password. Please try again."))
         // Sets our loggedin state (passed down in props to true)
-        navigate('/forum')
+        navigate('/home')
         // setTimeout(() => window.location.reload(), 100)
     }
 

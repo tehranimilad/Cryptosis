@@ -23,7 +23,7 @@ export default function NewComment() {
 
     const navigate = useNavigate();
     const navigateHome = () => {
-        navigate('/forum');
+        navigate('/home');
     }
 
     function handleSubmit(event) {

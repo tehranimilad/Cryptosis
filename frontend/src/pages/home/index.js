@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { createComments, getAllComments } from '../../utils/api';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './home.css'
 import CryptohopperWidget from '../../components/cryptoNews/cryptoNews';

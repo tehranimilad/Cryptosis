@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import NewComment from './pages/NewComment';
 import AccountPage from './pages/AccountPage';
 import ShowCommentEdit from './pages/CommentEdit';
-
 import LandingPage from './pages/LandingPage';
 import CryptoDeepDive from './pages/CryptoDeepDive';
 import PageNotFound from './pages/PageNotFound';
@@ -48,7 +47,7 @@ function App() {
       
         <Routes>
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
-          <Route path="/forum" element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route path="/home" element={<Home isLoggedIn={isLoggedIn} />} />
           <Route path="/login" element={<LogIn setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/newcomment" element={<NewComment/>} />
