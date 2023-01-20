@@ -39,10 +39,11 @@ const ShowCommentEdit = () => {
 
     const deleteComment = () => {
         const commentId = showCommentData._id
+        if (window.confirm("Are you sure you want to delete this comment?")) {
         deleteOneComments(commentId).then(alert("You deleted this Comment"))
         navigate('/forum')
 }
-
+    }
     return(
         <>
         <div className="editImage" />

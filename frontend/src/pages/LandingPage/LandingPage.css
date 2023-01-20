@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
-
+@media (max-width: 600px) {
+  
+  .landingPageImage {
+    padding-top: 100px;
+    width: 100%;
+  }
 .landing-page-container {
   background-color: rgb(255, 255, 255);
   color: #fff;
@@ -30,9 +35,46 @@ span {
   margin-bottom: 12px;
 } 
 
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
+
+.landing-page-container {
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  font-weight: 380;
+  font-size: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  font-style: normal;
+  width: auto;
+  box-sizing: border-box;
+  letter-spacing: 8px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  min-height: 30%;
+}
+
+span {
+    display: inline-block;
+  }
+
+.landing-page-container .crypto-animation {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-bottom: 12px;
+} 
+
 .landingPageImage {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  max-height: 700px;
 }
 
 

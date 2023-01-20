@@ -30,8 +30,6 @@ function App() {
       // Set the User as Logged In
       setIsLoggedIn(true)
       setUserName(localStorage.getItem('username'))
-      console.log(userName)
-      console.log(isLoggedIn)
       // Set the loading status to false
       setIsLoading(false)
     } else {

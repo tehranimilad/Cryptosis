@@ -35,6 +35,8 @@ export async function deleteUserAccount(userId) {
     await axios.delete(`http://localhost:8000/users/${userId}`, config)
 }
 
+
+
 // Get token data
 export async function getToken() {
     const { data } = await axios.get('http://localhost:8000/users/token', config)

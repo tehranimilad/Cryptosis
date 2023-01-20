@@ -15,7 +15,6 @@ const AccountPage = (props) => {
     useEffect(() => {
         // Grab the token and the user data associated with the specific token
         setUserData(localStorage.getItem('username'))
-        console.log(userId)
         getUserComments(userId)
         .then((data) => {
             setUserCommentData(data.comments)
@@ -24,11 +23,9 @@ const AccountPage = (props) => {
         
 }, []);
 
-
-    console.log(userCommentData)
     const handleDelete = () => {
         if (window.confirm("Are you sure you want to delete your account? This action can't be undone!")) {
-            deleteUserAccount(userData._id);
+            deleteUserAccount(userId)
             localStorage.clear();
             props.setIsLoggedIn(false);
             navigate('/');

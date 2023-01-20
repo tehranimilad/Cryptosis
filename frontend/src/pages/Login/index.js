@@ -21,16 +21,25 @@ const LogIn = (props) => {
     function handleSubmit(event) {
       // Prevent page from reloading
         event.preventDefault()
+        // check if password is null or undefined
+        if (!formData.password) {
+          alert("Please enter your password.")
+          return
+        }
         // Deconstructing data to set the local storage token equal to the token we created in our login route
         userLogin(formData)
             .then((data) => {
+              if(data.user){
               localStorage.username = data.user.username
               localStorage.userId = data.user._id
               localStorage.token = data.token
+              props.setIsLoggedIn(true)
+            } else {
+              alert("Incorrect username or password. Please try again.")
+            }
             })
             .catch(err => alert("Incorrect username or password. Please try again."))
         // Sets our loggedin state (passed down in props to true)
-        props.setIsLoggedIn(true)
         navigate('/forum')
         // setTimeout(() => window.location.reload(), 100)
     }
