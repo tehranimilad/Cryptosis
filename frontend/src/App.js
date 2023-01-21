@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Nav from './components/nav/index'
 import LogIn from './pages/Login';
 import SignUp from './pages/SignUp';
-import Home from './pages/Home';
+import HomePage from './pages/Home';
 import NewComment from './pages/NewComment';
 import AccountPage from './pages/AccountPage';
 import ShowCommentEdit from './pages/CommentEdit';
@@ -47,7 +47,7 @@ function App() {
       
         <Routes>
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
-          <Route path="/home" element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route path="/home" element={<HomePage isLoggedIn={isLoggedIn} />} />
           <Route path="/login" element={<LogIn setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/newcomment" element={<NewComment/>} />
