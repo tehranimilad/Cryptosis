@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import TradingTicker from "../tradingTicker/tradingTicker";
-import TradingViewChart from "../coinGeckoChart/coinGeckoChart";
 import './nav.css'
-import { Image } from "react-bootstrap";
+
 
 
 function Nav(props) {

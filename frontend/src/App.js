@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../src/index.css';
 import { Routes, Route } from "react-router-dom";
-import MyNavbar from './components/nav';
+import Nav from './components/nav/index'
 import LogIn from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
@@ -43,7 +43,7 @@ function App() {
     :
     <main>
 
-      <MyNavbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       
         <Routes>
           <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
