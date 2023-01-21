@@ -36,9 +36,9 @@ const LandingPage = () => {
   
     return (
         <>
-         <a href="/forum"><Image className="landingPageImage" src="https://img.freepik.com/free-vector/popular-cryptocurrency-logos-set_69286-369.jpg?w=2000" fluid/></a>
+         <a href="/home"><Image className="landingPageImage" src="https://img.freepik.com/free-vector/popular-cryptocurrency-logos-set_69286-369.jpg?w=2000" fluid/></a>
         <div className="landing-page-container">
-            <a href="/forum"><div className="crypto-animation" fluid>
+            <a href="/home"><div className="crypto-animation" fluid>
                 Cryptosis
             </div>
             <div className="crypto-animation" fluid>
