@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { createComments, getAllComments } from '../../utils/api';
 import './newComment.css'
-import { Image } from 'react-bootstrap';
+
 
 
 
