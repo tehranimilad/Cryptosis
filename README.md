@@ -39,5 +39,4 @@ npm start
 The only issue I'm currently dealing with is that I'm using two different crypto API's, which causes some of the crypto data prices to reflect different prices. I'm planning on changing the API's so that all the crypto prices match.
 
 
-One  hurdle I dealt with was implementing Anime.JS, and optimizing the animations for various screen resolutions. 
-
+A hurdle I dealt with was implementing Anime.JS, and optimizing the animations for various screen resolutions. Additionally, it was extremely time consuming find up-to-date and accurate API's.  
