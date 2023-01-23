@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from "react";
 import './accountPage.css'
-import { getToken } from "../../utils/api";
 
 const AccountPage = (props) => {
     const navigate = useNavigate();
