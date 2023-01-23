@@ -25,7 +25,7 @@ const HomePage = (props) => {
         <Button variant="dark" onClick={() => setShowComments(!showComments)}>
           {showComments ? 'Hide Comments' : 'Show Comments'}
         </Button>
-
+        <div className="commentBackground">
           {showComments ? 
           commentsList.map((comment, i) => {
               return(
@@ -39,6 +39,7 @@ const HomePage = (props) => {
               );
           }) : null
           }
+        </div>
       </div>
       <CryptohopperWidget />
   </>
