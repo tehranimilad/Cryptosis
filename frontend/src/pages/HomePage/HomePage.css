@@ -35,14 +35,6 @@ h1 {
     text-align: center;
 }
 
-.tradingview-widget-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .forum-image {
     background-image: url("https://emoneyadvisor.com/wp-content/uploads/2022/04/MicrosoftTeams-image-15-scaled.jpg");
     height: 20vh;

@@ -20,7 +20,7 @@ function Nav(props) {
           <a className="navbar-brand" href="/">Cryptosis</a>
         </div>
         <Link to="/home" className="nav-link">Home</Link>
-        <Link to="/cryptocurrencies" className="nav-link">Live Crypto Data</Link>
+        <Link to="/cryptocurrencies" className="nav-link">Crypto Prices</Link>
         {props.isLoggedIn ? (
           <>
             <Link to="/account" className="nav-link">Account</Link>
