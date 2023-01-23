@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './cryptoNews.css'
 
+
+// Refrenced https://cryptopanic.com/developers/widgets/ for News API
 const CryptoNews = () => {
   useEffect(() => {
     const script = document.createElement('script');
