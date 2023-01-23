@@ -19,11 +19,11 @@ const LandingPage = () => {
             // The animation is set to loop continuously
             loop: true
         });
-// The animation timeline has 4 animation steps:
-// Scale property is set to 0.6
-// letterSpacing property is set to "5px"
-// Scale property is then set to 0.9
-// letterSpacing property is then set to "8px"
+        // The animation timeline has 4 animation steps:
+        // Scale property is set to 0.6
+        // letterSpacing property is set to "5px"
+        // Scale property is then set to 0.9
+        // letterSpacing property is then set to "8px"
         animation
             .add({
               scale: 0.6

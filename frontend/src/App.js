@@ -46,7 +46,7 @@ function App() {
       <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       
         <Routes>
-          <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<HomePage isLoggedIn={isLoggedIn} />} />
           <Route path="/login" element={<LogIn setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} setIsLoggedIn={setIsLoggedIn}/>} />

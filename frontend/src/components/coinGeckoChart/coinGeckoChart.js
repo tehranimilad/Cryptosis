@@ -5,6 +5,7 @@ const CoinGecko = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://widgets.coingecko.com/coingecko-coin-list-widget.js";
+    // script will be executed asynchronously, allowing the page to continue loading while the script is being fetched.
     script.async = true;
     document.body.appendChild(script);
   }, []);
