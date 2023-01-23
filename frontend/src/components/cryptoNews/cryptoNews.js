@@ -5,16 +5,17 @@ const CryptohopperWidget = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://www.cryptohopper.com/widgets/js/script';
+    // script will be executed asynchronously, allowing the page to continue loading while the script is being fetched.
     script.async = true;
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    }
   }, []);
 
   return (
-    <div className="cryptohopper-web-widget" data-id="5" data-news_count="3"></div>
+   
+
+    <div> 
+      <div className="cryptohopper-web-widget" data-id="5" data-news_count="3"></div>
+    </div>
   );
 }
 

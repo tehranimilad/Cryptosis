@@ -11,7 +11,7 @@ const HomePage = (props) => {
         getAllComments()
             .then(data => setComments(data))
             .catch(err => alert("couldn't load any comments"))
-    }, []);
+    });
     return (
       <>
       <div className="forum-image" />

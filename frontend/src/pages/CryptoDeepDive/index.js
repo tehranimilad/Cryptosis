@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import CoinGecko from '../../components/coinGeckoChart/coinGeckoChart';
 import CoinGeckoHeatmap from '../../components/coinGeckHeatmap/coinGeckoHeatmap';
 
