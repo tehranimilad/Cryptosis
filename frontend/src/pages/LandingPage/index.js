@@ -6,6 +6,7 @@ import { Image } from "react-bootstrap";
 
 const LandingPage = () => {
     useEffect(() => {
+      // modified animation referenced from https://codepen.io/WojciechWKROPCE/pen/VwLePLy
         const mainAnimation = new Letterize({
             targets: ".crypto-animation"
         });

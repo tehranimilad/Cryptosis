@@ -43,7 +43,7 @@ const AccountPage = (props) => {
                         <Button href="/newcomment" id="create-comment">Create a Comment</Button>
                         <br />
                         <br />
-                        <Button href="/" variant="secondary" id="go-home">View Discussion Board</Button>
+                        <Button href="/home" variant="secondary" id="go-home">View Discussion Board</Button>
                     </div>
                 </div>
             </div>

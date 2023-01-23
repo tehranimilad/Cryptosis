@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllComments } from '../../utils/api';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css'
-import CryptohopperWidget from '../../components/cryptoNews/cryptoNews';
+import CryptoNews from '../../components/cryptoNews/cryptoNews';
 
 import { Stack } from 'react-bootstrap';
 
@@ -50,7 +50,7 @@ const HomePage = (props) => {
           }
           </div>
         </div>
-      <CryptohopperWidget />
+      <CryptoNews />
     </div>
   </>
 )

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './cryptoNews.css'
 
-const CryptohopperWidget = () => {
+const CryptoNews = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = "https://static.cryptopanic.com/static/js/widgets.min.js";
@@ -28,4 +28,4 @@ const CryptohopperWidget = () => {
   );
 }
 
-export default CryptohopperWidget;
+export default CryptoNews;
