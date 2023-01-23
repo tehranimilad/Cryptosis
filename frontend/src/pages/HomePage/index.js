@@ -13,7 +13,6 @@ const HomePage = (props) => {
     useEffect(() => {
         getAllComments()
             .then(data => setComments(data))
-            .catch(err => alert("couldn't load any comments"))
     });
     return (
       <>
