@@ -24,6 +24,7 @@ h1 {
 
 .commentContent {
     background: rgb(255, 255, 255);
+    font-weight: bolder;
 }
 
 .commentSection {
@@ -57,3 +58,6 @@ h1 {
     background-size: cover;
 }
 
+.bold {
+    font-weight: bold;
+  }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { createComments, getAllComments } from '../../utils/api';
+import { getAllComments } from '../../utils/api';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css'
 import CryptohopperWidget from '../../components/cryptoNews/cryptoNews';
@@ -21,6 +21,7 @@ const HomePage = (props) => {
         // Button to add comment wont show unless user is logged in
         <Button variant="primary" href="/newcomment">Click here to voice your opinion!</Button>
         : null}
+ {/* If showComments is true, the text "Hide Comments" will be displayed on the button, otherwise, if showComments is false, the text "Show Comments" will be displayed. */}
         <Button variant="dark" onClick={() => setShowComments(!showComments)}>
           {showComments ? 'Hide Comments' : 'Show Comments'}
         </Button>
