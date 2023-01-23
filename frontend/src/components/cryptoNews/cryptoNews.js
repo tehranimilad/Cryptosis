@@ -15,7 +15,7 @@ const CryptoNews = () => {
         href="https://cryptopanic.com/"
         target="_blank"
         data-news_feed="recent"
-        data-font_family="sans"
+        data-font_family="Orbitron"
         data-bg_color="#FFFFFF"
         data-text_color="#333333"
         data-link_color="#010101"

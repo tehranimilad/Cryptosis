@@ -7,38 +7,34 @@ import { Image } from "react-bootstrap";
 const LandingPage = () => {
     useEffect(() => {
       // modified animation referenced from https://codepen.io/WojciechWKROPCE/pen/VwLePLy
-        const mainAnimation = new Letterize({
-            targets: ".crypto-animation"
-        });
-        // creates a new animation timeline, and set the targets to the elements returned by mainAnimation
-        const animation = anime.timeline({
-            targets: mainAnimation.listAll,
-            delay: anime.stagger(100, {
-              grid: [mainAnimation.list[0].length, mainAnimation.list.length],
-              from: "center"
-            }),
-            // The animation is set to loop continuously
-            loop: true
-        });
-        // The animation timeline has 4 animation steps:
-        // Scale property is set to 0.6
-        // letterSpacing property is set to "5px"
-        // Scale property is then set to 0.9
-        // letterSpacing property is then set to "8px"
-        animation
-            .add({
-              scale: 0.6
-            })
-            .add({
-              letterSpacing: "5px"
-            })
-            .add({
-              scale: .9
-            })
-            .add({
-              letterSpacing: "8px"
-            });
-    }, []);
+    const mainAnimation = new Letterize({
+        targets: ".crypto-animation"
+    });
+    // creates a new animation timeline, and set the targets to the elements returned by mainAnimation
+    const animation = anime.timeline({
+        targets: mainAnimation.listAll,
+        delay: anime.stagger(100, {
+          grid: [mainAnimation.list[0].length, mainAnimation.list.length],
+          from: "center"
+        }),
+        // The animation is set to loop continuously
+        loop: true
+    });
+    // The animation has 4 steps:
+    // Scale property is set to 0.6
+    // letterSpacing property is set to "5px"
+    // Scale property is then set to 0.9
+    // letterSpacing property is then set to "8px"
+    animation
+        .add({
+          scale: 0.6})
+        .add({
+          letterSpacing: "5px"})
+        .add({
+          scale: .9})
+        .add({
+          letterSpacing: "8px"});
+}, []);
   
     return (
         <>
