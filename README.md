@@ -36,7 +36,8 @@ npm start
 ```
 ### Major Hurdles/ Unsolved Problems:
 
-At the moment, the only unsolved problem is the connection to the Coingecko API is receiving a web-socket error, but the information is still being properly rendered on the pages. The website functions as it should, but the user might see a websocket error in the console due to issues with the providor of the API. 
+At the moment, the only unsolved problem is the connection to the Coingecko API is receiving a web-socket error, but the information is still being properly rendered on the pages. The website functions as it should, but the user might see a websocket error in the console due to issues with the providor of the API. I will be releasing an updated version of the website that will include a new API provider that will display similar data.
+
 
 
 One major hurdle I dealt with was implementing Anime.JS, and optimizing the animations for various screen resolutions. 
