@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import TradingTicker from "../tradingTicker/tradingTicker";
-import TradingViewChart from "../coinGeckoChart/coinGeckoChart";
 import './nav.css'
-import { Image } from "react-bootstrap";
+
 
 
 function Nav(props) {
@@ -21,7 +19,7 @@ function Nav(props) {
         <div className="navbar-header">
           <a className="navbar-brand" href="/">Cryptosis</a>
         </div>
-        <Link to="/forum" className="nav-link">Forum</Link>
+        <Link to="/home" className="nav-link">Home</Link>
         <Link to="/cryptocurrencies" className="nav-link">Live Crypto Data</Link>
         {props.isLoggedIn ? (
           <>

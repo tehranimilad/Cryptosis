@@ -33,7 +33,7 @@ const ShowCommentEdit = () => {
         updateOneComments(showCommentData._id, editedState).then(data => {
             setShowCommentData(data)
             setEditedState(data)
-            navigate('/forum')
+            navigate('/home')
         })
     }
 
@@ -41,7 +41,7 @@ const ShowCommentEdit = () => {
         const commentId = showCommentData._id
         if (window.confirm("Are you sure you want to delete this comment?")) {
         deleteOneComments(commentId).then(alert("You deleted this Comment"))
-        navigate('/forum')
+        navigate('/home')
 }
     }
     return(

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { createComments, getAllComments } from '../../utils/api';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import './home.css'
+import './HomePage.css'
 import CryptohopperWidget from '../../components/cryptoNews/cryptoNews';
 
-export default function Home(props) {
+const HomePage = (props) => {
     const [commentsList, setComments] = useState([]);
     const [showComments, setShowComments] = useState(false);
     useEffect(() => {
@@ -44,3 +43,5 @@ export default function Home(props) {
   </>
 )
 }
+
+export default HomePage
