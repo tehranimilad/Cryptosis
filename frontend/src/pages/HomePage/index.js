@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createComments, getAllComments } from '../../utils/api';
 import Button from 'react-bootstrap/Button';
-import './home.css'
+import './HomePage.css'
 import CryptohopperWidget from '../../components/cryptoNews/cryptoNews';
 
 const HomePage = (props) => {

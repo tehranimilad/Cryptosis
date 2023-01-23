@@ -68,19 +68,19 @@ export async function getUserComments(itemId) {
 // Show One comments
 
 export async function showOneComments(itemId) {
-    const { data } = await axios.get(`comments/${itemId}`)
+    const { data } = await axios.get(`/comments/${itemId}`)
     return data
 }
 
 // Update a comments
 
 export async function updateOneComments(itemId, formData) {
-    const { data } = await axios.put(`comments/${itemId}`, formData)
+    const { data } = await axios.put(`/comments/${itemId}`, formData)
     return data
 }
 
 // Delete a comments
 
 export async function deleteOneComments(itemId) {
-    await axios.delete(`comments/${itemId}`, config)
+    await axios.delete(`/comments/${itemId}`, config)
 }
