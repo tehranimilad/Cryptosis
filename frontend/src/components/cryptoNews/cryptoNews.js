@@ -11,7 +11,7 @@ const CryptoNews = () => {
   }, []);
 
   return (
-      <a
+      <div 
         href="https://cryptopanic.com/"
         target="_blank"
         data-news_feed="recent"
@@ -19,12 +19,12 @@ const CryptoNews = () => {
         data-bg_color="#FFFFFF"
         data-text_color="#333333"
         data-link_color="#010101"
-        data-header_bg_color="#30343B"
+        data-header_bg_color="#000000"
         data-header_text_color="#FFFFFF"
         data-posts_limit="6"
         className="CryptoPanicWidget">
         Latest Updates In Crypto
-      </a>
+      </div>
   );
 }
 
