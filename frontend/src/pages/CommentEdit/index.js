@@ -18,7 +18,6 @@ const ShowCommentEdit = () => {
     const {id} = useParams()
     useEffect(() => {
             showOneComments(id).then(data => {
-            console.log(data)
             setShowCommentData(data)
             setEditedState(data)
         })
