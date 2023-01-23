@@ -31,7 +31,6 @@ h1 {
     background: rgb(255, 255, 255);
 }
 
-
 .mainFormHeader {
     text-align: center;
 }
@@ -59,5 +58,5 @@ h1 {
 }
 
 .bold {
-    font-weight: bold;
-  }
+  font-weight: bold;
+}
