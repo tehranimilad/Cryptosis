@@ -3,7 +3,6 @@ import { getAllComments } from '../../utils/api';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css'
 import CryptoNews from '../../components/cryptoNews/cryptoNews';
-
 import { Stack } from 'react-bootstrap';
 
 
@@ -13,7 +12,7 @@ const HomePage = (props) => {
     useEffect(() => {
         getAllComments()
             .then(data => setComments(data))
-    });
+  }, []);
     return (
       <>
     <div>
