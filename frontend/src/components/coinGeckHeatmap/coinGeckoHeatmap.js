@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 
-// Refrenced https://www.coingecko.com/en/widgets/coin_heatmap_widget for widget
 const CoinGeckoHeatmap = () => {
   useEffect(() => {
     const script = document.createElement("script");
