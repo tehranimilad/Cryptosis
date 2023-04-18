@@ -38,11 +38,11 @@ const HomePage = (props) => {
               return(
                   <Stack gap={2} className="commentSection" key={i}>
                       <div className="bg-light border">
-                        <p className="commentBold">Title: </p> <p className="commentContent">{comment.title}</p>
-                        <p className="commentBold">Username: </p> <p className="commentContent">{comment.user && comment.user.username}</p>
-                        <p className="commentBold">Time/Date Posted: </p> <p className="commentContent">{comment.created}</p>
-                        <p className="commentBold">Crypto: </p> <p className="commentContent">{comment.crypto} </p>
-                        <p className="commentBold">Comment: </p> <p className="commentContent">{comment.comment}</p>
+                        <p className="commentBold">Title: {comment.title}</p>
+                        <p className="commentBold">Username: {comment.user && comment.user.username}</p>
+                        <p className="commentBold">Time/Date Posted: {comment.created}</p>
+                        <p className="commentBold">Crypto: {comment.crypto} </p>
+                        <p className="commentBold">Comment: {comment.comment}</p>
                       </div>
                   </Stack> 
               );
