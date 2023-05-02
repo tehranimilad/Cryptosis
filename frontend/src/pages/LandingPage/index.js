@@ -12,7 +12,9 @@ const LandingPage = () => {
     });
     // creates a new animation timeline, and set the targets to the elements returned by mainAnimation
     const animation = anime.timeline({
+      // applies to "mainAnimation targets
         targets: mainAnimation.listAll,
+        // Each element will start at a different time
         delay: anime.stagger(100, {
           grid: [mainAnimation.list[0].length, mainAnimation.list.length],
           from: "center"
