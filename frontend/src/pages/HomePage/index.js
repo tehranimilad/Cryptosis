@@ -50,7 +50,6 @@ const HomePage = (props) => {
           </div>
         </div>
       <CryptoNews />
-
     </div>
   </>
 )
