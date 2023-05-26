@@ -5,10 +5,6 @@ import Button from 'react-bootstrap/Button';
 import { createComments, getAllComments } from '../../utils/api';
 import './newComment.css'
 
-
-
-
-
 export default function NewComment() {
     const [commentsList, setComments] = useState([]);
     const [formData, setFormData] = useState({ 
